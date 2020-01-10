@@ -11,6 +11,7 @@ class TicTacToe
   [0,4,8],
   [2,4,6]]
 
+  CHARACTER_SET = ["X", "O"]
 
   def initialize
     @board = Array.new(9, " ")
@@ -68,6 +69,34 @@ class TicTacToe
       self.move(index, self.current_player)
     else
       self.turn
+    end
+  end
+
+  #------- win helper methods --------
+
+  #Returns true if the board has a win on it and false if it does not
+  def won?
+    self.any_winning_combination(board)
+  end
+
+  #Iterates through all of the WIN_COMBINATIONS and see if there is a winning combination
+  def any_winning_combination
+    self.class.WIN_COMBINATIONS.detect do |combination|
+      self.any_char_combo?(combination)
+    end
+  end
+
+  #Checks winning_combo? for all characters
+  def any_char_combo?(combination)
+    self.class.CHARACTER_SET.any? do |character|
+      self.winning_combo?(combination, character)
+    end
+  end
+
+  #Sees if there is a win for a specific combination, board, and character.
+  def winning_combo?(combination, character = "X")
+    combination.all? do |index|
+      self.board[index] == character
     end
   end
 
