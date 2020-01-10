@@ -118,8 +118,7 @@ class TicTacToe
   end
 
   def winner
-    win = self.won?
-    win ? win[0] : nil
+    self.won? ? self.board[win[0]] : nil
   end
 
 end
