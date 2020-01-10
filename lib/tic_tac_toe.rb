@@ -44,8 +44,8 @@ class TicTacToe
   def turn_count
     turn = 0
     self.board.each do |spot|
-      if spot != " " && spot != "" && spot != nil 
-        turn += 1 
+      if spot != " " && spot != "" && spot != nil
+        turn += 1
       end
     end
     turn
