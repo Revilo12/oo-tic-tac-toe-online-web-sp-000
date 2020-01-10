@@ -70,6 +70,7 @@ class TicTacToe
     else
       self.turn
     end
+    self.display_board
   end
 
   #------- win helper methods --------
