@@ -117,8 +117,8 @@ class TicTacToe
     self.draw? || self.won? || self.full?
   end
 
-  def winner(board)
-    win = won?(board)
+  def winner
+    win = self.won?
     win ? win : nil
   end
 
