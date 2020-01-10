@@ -41,5 +41,15 @@ class TicTacToe
     index.between?(0,8) && !self.position_taken?(index)
   end
 
+  def turn_count
+    turn = 0
+    self.board.each do |spot|
+      if spot != " " && spot != "" && spot != nil 
+        turn += 1 
+      end
+    end
+    turn
+  end
+
 
 end
