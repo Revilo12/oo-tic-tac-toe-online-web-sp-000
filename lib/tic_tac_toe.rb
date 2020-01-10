@@ -77,7 +77,7 @@ class TicTacToe
 
   #Returns true if the board has a win on it and false if it does not
   def won?
-    self.any_winning_combination(board)
+    self.any_winning_combination
   end
 
   #Iterates through all of the WIN_COMBINATIONS and see if there is a winning combination
