@@ -82,14 +82,14 @@ class TicTacToe
 
   #Iterates through all of the WIN_COMBINATIONS and see if there is a winning combination
   def any_winning_combination
-    self.class.WIN_COMBINATIONS.detect do |combination|
+    WIN_COMBINATIONS.detect do |combination|
       self.any_char_combo?(combination)
     end
   end
 
   #Checks winning_combo? for all characters
   def any_char_combo?(combination)
-    self.class.CHARACTER_SET.any? do |character|
+    CHARACTER_SET.any? do |character|
       self.winning_combo?(combination, character)
     end
   end
