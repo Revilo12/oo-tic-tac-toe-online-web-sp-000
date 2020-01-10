@@ -1,5 +1,5 @@
 class TicTacToe
-  attr_accsessor :board
+  attr_accessor :board
 
   WIN_COMBINATIONS = [
   [0,1,2], # Top row
