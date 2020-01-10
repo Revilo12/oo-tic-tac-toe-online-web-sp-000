@@ -95,7 +95,7 @@ class TicTacToe
   end
 
   def full?
-    self.board.all? {|spot| self.position_taken_spot?(spot)}
+    self.board.all? {|spot| self.position_taken?(spot)}
   end
 
   #Sees if there is a win for a specific combination, board, and character.
